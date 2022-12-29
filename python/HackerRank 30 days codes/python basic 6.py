@@ -1,15 +1,17 @@
-x = int(input())
-dic = {}
-a =[input().split() for i in range(x)]
-for k, v in a:
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = int(input())
+dic = dict()
+a = [input().split() for i in range(n)]
+for k,v in a:
     dic[k] = v
-print(dic)
-while True:
+i=0
+while i<n:
     try:
-        v = input()
-        if v in dic:
-            print(v +"="+ dic[v])
+        e = input()
+        if e in dic:
+            print(e + "=" + dic[e])
         else:
             print("Not found")
-    except Exception as e:
-        print(e)
+    except EOFError:
+            break
+    i+=1
